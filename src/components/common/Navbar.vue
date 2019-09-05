@@ -1,6 +1,6 @@
 <template>
     <div class="navbar">
-        <h1 class="title">house<span class="title-green">hunter</span></h1>
+        <a href="/"><h1 class="title">house<span class="title-green">hunter</span></h1></a>
         <span class="title-follower">helping you find rental properties in Amsterdam </span>
     </div>
 </template>
@@ -33,7 +33,7 @@ export default {
 }
 
 .title-green {
-    color: #3DDC97;
+    color: #F7C100;
 }
 
 .title-follower{
