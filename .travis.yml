@@ -19,7 +19,5 @@ deploy:
   bucket: "househunterfe" 
   region: "us-east-1"
   local_dir: dist
-    on:
-    branch: master
   skip_cleanup: true
   acl: public_read
