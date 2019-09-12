@@ -1,8 +1,11 @@
 # Check out [House Hunter](http://househunterfe.s3-website-us-east-1.amazonaws.com/#/)!
 
+
+
 ### Application I built whilst looking for an apartment in Amsterdam with my partner.
 
 ### Got a bit sick of having to look on different websites all the time 😉.
+
 
 Simple [Vue Cli](https://cli.vuejs.org/) front end, talks to this [Nodejs/Typescript Backend](https://github.com/scotchjdmacdonald/house-hunter)
 
@@ -12,19 +15,21 @@ Built and deployed using [Travis CI](travis-ci.org) (check out the .travis.yml),
 
 
 
-## Project setup
+
+
+### Project setup
 ```
 npm i
 ```
-### Compiles and hot-reloads for development
+#### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
-### Compiles and minifies for production
+#### Compiles and minifies for production
 ```
 npm run build
 ```
-### Lints and fixes files
+#### Lints and fixes files
 ```
 npm run lint --fix
 ```
