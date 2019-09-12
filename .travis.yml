@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  - "stable"
+
+cache:
+  npm: false
+
+script:
+  - npm i
+  - npm run build
+
+deploy:
+  verbose: true
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  bucket: househunterfe 
+  endpoint: househunterfe.s3-website-us-east-1.amazonaws.com
+  region: us-east-1
+  local_dir: dist
+  skip_cleanup: true
