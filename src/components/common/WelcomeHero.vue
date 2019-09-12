@@ -1,8 +1,10 @@
 <template>
     <div class="welcome-hero" v-if="newSearch">
         <div class="hero-text">
-            <h1>Welcome to househunter</h1>
-            <p>Fiddle with the above parameters, click Search, and start hunting.</p>
+            <h1>Looking to rent in Amsterdam?</h1>
+            <p>Welcome to househunter, we look across different rental sites for properties
+            matching your preferences,</p>
+            <p>fiddle with the above parameters, click Search, and we will start hunting.</p>
         </div>
         <div>
             <img src="@/assets/heroImg5.svg">
@@ -27,14 +29,13 @@ export default {
 <style scoped>
 .welcome-hero{
     width: 100%;
-    height: 300px;
     justify-content: center;
     align-content: center;
     display: flex;
     flex-direction: column;
-    padding-top: 150px;
     text-align: center;
     color: #F7C100;
+    margin-top: 50px;
 }
 
 .hero-text{
@@ -43,6 +44,7 @@ export default {
 
 h1{
     font-size: 40px;
+    padding-bottom: 22px;
 }
 img{
   display: block;

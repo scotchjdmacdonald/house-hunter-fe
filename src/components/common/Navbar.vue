@@ -22,10 +22,10 @@ export default {
     overflow: hidden;
     background-color: #3772FF;
     padding-left: 40px;
-    padding-top: 15px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 15px;
     z-index: 1;
-
+    margin: 0px;
 }
 .title {
     font-size: 45px;

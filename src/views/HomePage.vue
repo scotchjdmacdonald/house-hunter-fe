@@ -7,6 +7,7 @@
             <LoadingHero/>
             <PropertiesBoard/>
         </div>
+        <div id="footer">by <a target="_blank" href="https://github.com/scotchjdmacdonald">Scotch</a></div>
     </div>
 </template>
 
@@ -35,7 +36,26 @@ export default {
     padding-left: 50px;
     padding-right: 50px;
     width: 100%;
-    padding-top: 30px;
+    padding-top: 15px;
+    margin-bottom: 35px;
+}
+
+#footer {
+    background-color: #3772FF;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    margin: 0px;
+    padding-right: 40px;
+    padding-top: 6px;
+    text-align: end;
+    font-size: 13px;
+    color: #FFFCF9 !important;
+}
+
+a {
+    color: #FFFCF9;
 }
 
 </style>

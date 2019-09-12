@@ -11,7 +11,7 @@
   color: #FFFCF9;
   background-color: aliceblue;
   height: 100%;
-
+  overflow: scroll;
 }
 
 </style>

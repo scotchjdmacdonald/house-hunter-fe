@@ -123,13 +123,12 @@ export default {
 
 <style scoped>
 .search-box {
-    background-color: #4F83FF;
-    padding-top: 10px;
-    padding-bottom: 40px;
+    background-color: #3772FF;
+    padding-bottom: 30px;
     padding-left: 50px;
     padding-right: 50px;
-    border: #4F83FF solid;
-    border-radius: 5px;
+    border: #3772FF solid;
+    border-radius: 4px;
     color: #f0f8ff;
     font-size: 14px;
 }
