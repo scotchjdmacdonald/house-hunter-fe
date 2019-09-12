@@ -14,7 +14,7 @@ Using vue framework [VueSax](https://github.com/lusaxweb/vuesax).
 Built and deployed using [Travis CI](travis-ci.org) (check out the .travis.yml), hosted in [AWS S3](https://aws.amazon.com/s3/) bucket with static site hosting.
 
 
-
+---
 
 
 #### Project setup
