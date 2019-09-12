@@ -17,7 +17,7 @@ Built and deployed using [Travis CI](travis-ci.org) (check out the .travis.yml),
 
 
 
-### Project setup
+#### Project setup
 ```
 npm i
 ```
