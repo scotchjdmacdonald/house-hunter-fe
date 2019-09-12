@@ -38,7 +38,7 @@ export default new Vuex.Store({
     },
 
     // SearchBoxParams
-    updateSuburb(state, minSize) {
+    updateSuburb(state, suburb) {
       state.search.searchParams.suburb = suburb;
     },
     updateMinSize(state, minSize) {

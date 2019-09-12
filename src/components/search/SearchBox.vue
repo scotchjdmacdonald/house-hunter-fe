@@ -3,7 +3,7 @@
         <div class="search-container">
             <div class="select-input">
                 <div class="input-label"><label >Choose suburb</label></div>
-                <vs-select :disabled="isSearching" autocomplete placeholder="Select" 
+                <vs-select :disabled="isSearching" autocomplete placeholder="Select"
                   class="inner-select"
                     v-model="suburb" width="210px">
                     <vs-select-item :key="index" :value="item.text"
@@ -51,7 +51,9 @@
 </template>
 
 <script>
-import { sizes, prices, bedrooms, suburbs } from '@/constants/constants';
+import {
+  sizes, prices, bedrooms, suburbs,
+} from '@/constants/constants';
 
 export default {
   name: 'SearchBox',
@@ -63,7 +65,7 @@ export default {
       sizes,
       prices,
       bedrooms,
-      suburbs
+      suburbs,
     };
   },
   methods: {
