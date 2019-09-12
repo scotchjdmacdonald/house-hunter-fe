@@ -17,8 +17,9 @@ deploy:
   secret_access_key:
     secure: $AWS_SECRET_KEY
   bucket: "househunterfe" 
-  endpoint: "househunterfe.s3-website-us-east-1.amazonaws.com"
   region: "us-east-1"
   local_dir: dist
+    on:
+    branch: master
   skip_cleanup: true
   acl: public_read
