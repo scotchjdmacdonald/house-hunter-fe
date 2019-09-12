@@ -4,7 +4,7 @@
 
 ### Got a bit sick of having to look on different websites all the time 😉.
 
-Simple [Vue Cli](https://cli.vuejs.org/) front end, talks to [Nodejs/Typescript Backend](https://github.com/scotchjdmacdonald/house-hunter)
+Simple [Vue Cli](https://cli.vuejs.org/) front end, talks to this [Nodejs/Typescript Backend](https://github.com/scotchjdmacdonald/house-hunter)
 
 Using vue framework [VueSax](https://github.com/lusaxweb/vuesax).
 
