@@ -127,8 +127,6 @@ export default {
     padding-bottom: 30px;
     padding-left: 50px;
     padding-right: 50px;
-    border: #3772FF solid;
-    border-radius: 4px;
     color: #f0f8ff;
     font-size: 14px;
 }

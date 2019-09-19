@@ -9,7 +9,10 @@
 
   font-family: 'Montserrat', sans-serif;
   color: #FFFCF9;
-  background-color: aliceblue;
+  background-image: url('./assets/vectr-bg.svg');
+  background-size: cover;
+  background-position-x: 0;
+  background-position-y: 0;
   height: 100%;
   overflow: scroll;
 }

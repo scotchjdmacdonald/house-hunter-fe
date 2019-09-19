@@ -41,7 +41,7 @@ export default {
 }
 
 #footer {
-    background-color: #3772FF;
+    /*background-color: #3772FF;**/
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -51,11 +51,12 @@ export default {
     padding-top: 6px;
     text-align: end;
     font-size: 13px;
-    color: #FFFCF9 !important;
+    font-weight: 600;
+    color: #3772FF !important;
 }
 
 a {
-    color: #FFFCF9;
+    color: #3772FF;
 }
 
 </style>
