@@ -70,7 +70,7 @@ export default {
   },
   methods: {
     async searchProperties() {
-      this.$store.dispatch('searchForProperties');
+      this.$store.dispatch('newSearch');
     },
   },
   computed: {
@@ -133,9 +133,9 @@ export default {
 
 .search-container {
     width: 100%;
-    display: inline-flex;
+    display: flex;
     flex-flow: row wrap;
-    align-content: flex-start;
+    justify-content: space-around;
 }
 
 .input-label {
@@ -149,7 +149,6 @@ export default {
 
 .select-input {
     margin-top: 20px;
-    margin-right: 65px;
 }
 .select-input-first {
     margin-top: 20px;
@@ -157,7 +156,6 @@ export default {
 }
 
 .search-button {
-    margin-left: auto;
     margin-top: 41px;
 }
 

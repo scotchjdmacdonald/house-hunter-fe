@@ -32,6 +32,10 @@ export default {
 
 <style scoped>
 
+.homepage {
+    padding-top: 110px;
+}
+
 #page-container{
     padding-left: 50px;
     padding-right: 50px;

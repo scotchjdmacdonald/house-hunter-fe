@@ -20,6 +20,7 @@ export default new Vuex.Store({
         maxPrice: null,
         suburb: null,
         minBedrooms: null,
+        page: 1,
       },
       searching: false,
       newSearch: true,
@@ -35,6 +36,15 @@ export default new Vuex.Store({
 
     updateNumProperties(state, numProperties) {
       state.properties.numProperties = numProperties;
+    },
+    incrementPage(state, page) {
+      state.search.searchParams.page += 1;
+    },
+    decrementPage(state, page) {
+      state.search.searchParams.page -= 1;
+    },
+    resetPage(state, page){
+      state.search.searchParams.page = 1;
     },
 
     // SearchBoxParams
@@ -67,6 +77,12 @@ export default new Vuex.Store({
   },
 
   actions: {
+
+    newSearch({ commit, dispatch }) {
+      commit('resetPage');
+      dispatch('searchForProperties')
+    },
+    
     searchForProperties({ commit, getters }) {
       commit('removeWelcome');
       commit('toggleLoading');
@@ -88,5 +104,14 @@ export default new Vuex.Store({
           console.log(error);
         });
     },
+
+    getNextPage({commit, dispatch}) {
+      commit('incrementPage');
+      dispatch('searchForProperties');
+    },
+    getPrevPage({commit, dispatch}) {
+      commit('decrementPage');
+      dispatch('searchForProperties');      
+    }
   },
 });

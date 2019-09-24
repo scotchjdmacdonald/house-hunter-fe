@@ -1,7 +1,7 @@
 <template>
     <div class="image-carousel">
         <carousel navigationEnabled="true" paginationPosition="bottom-overlay"
-            paginationActiveColor="#4F83FF" paginationPadding="4" paginationSize="6"
+            paginationActiveColor="#4F83FF" paginationPadding=4 paginationSize=6
             :per-page="1">
             <slide v-for="(img, index) in images" :key="index">
                 <img :src="img"/>
