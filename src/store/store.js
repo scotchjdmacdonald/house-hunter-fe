@@ -30,13 +30,27 @@ export default new Vuex.Store({
 
   getters: {
     searchUri: state => constructSearchUri(state.search.searchParams),
+
+    numPages: state => {
+      return (~~(state.properties.totalProperties / state.properties.numProperties));
+    },
   },
 
   mutations: {
 
+    //Property
     updateNumProperties(state, numProperties) {
       state.properties.numProperties = numProperties;
     },
+    updateTotalProperties(state, totalProperties){
+      state.properties.totalProperties = totalProperties;
+    },
+    addPropertyResults(state, properties) {
+      Vue.set(state.properties, 'list', [...properties]);
+    },
+
+
+    //Pagination
     incrementPage(state, page) {
       state.search.searchParams.page += 1;
     },
@@ -64,10 +78,7 @@ export default new Vuex.Store({
       state.search.searchParams.minBedrooms = minBedrooms;
     },
 
-    addPropertyResults(state, properties) {
-      Vue.set(state.properties, 'list', [...properties]);
-    },
-
+    //Conditional Rendering
     toggleLoading(state) {
       state.search.searching = !(state.search.searching);
     },
@@ -82,7 +93,7 @@ export default new Vuex.Store({
       commit('resetPage');
       dispatch('searchForProperties')
     },
-    
+
     searchForProperties({ commit, getters }) {
       commit('removeWelcome');
       commit('toggleLoading');
@@ -92,8 +103,10 @@ export default new Vuex.Store({
         .then((response) => {
           console.log(response);
           if (response.status === 200) {
-            const properties = response.data;
-            commit('updateNumProperties', response.data.length);
+            const properties = response.data.properties;
+            const totalResults = response.data.totalResults;
+            commit('updateNumProperties', response.data.properties.length);
+            commit('updateTotalProperties', totalResults);
             commit('addPropertyResults', properties);
             commit('toggleLoading');
           } else {

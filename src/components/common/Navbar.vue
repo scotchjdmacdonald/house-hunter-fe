@@ -30,6 +30,7 @@ export default {
 .title {
     font-size: 45px;
     color: #FFFCF9;
+    font-weight: 800;
 }
 
 .title-green {

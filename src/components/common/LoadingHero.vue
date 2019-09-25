@@ -25,6 +25,7 @@ export default {
 .loading-title {
     padding-bottom: 30px;
     padding-left: 20px;
+    font-weight: 800;
 }
 
 .loading-hero {

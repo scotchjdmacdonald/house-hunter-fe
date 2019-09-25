@@ -49,6 +49,7 @@ p {
 h1{
     font-size: 35px;
     padding-bottom: 22px;
+    font-weight: 800;
 }
 img{
   display: block;
