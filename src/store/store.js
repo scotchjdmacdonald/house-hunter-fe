@@ -3,6 +3,8 @@ import Vue from 'vue';
 import axios from 'axios';
 import { error } from 'util';
 import { constructSearchUri } from '@/services/UrlHelper';
+import createPersistedState from 'vuex-persistedstate'
+import * as Cookies from 'js-cookie'
 
 Vue.use(Vuex);
 
@@ -125,4 +127,6 @@ export default new Vuex.Store({
       dispatch('searchForProperties');
     },
   },
+
+    plugins: [createPersistedState()],
 });
