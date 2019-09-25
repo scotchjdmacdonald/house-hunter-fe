@@ -49,7 +49,7 @@ export default {
     },
     displayProperties() {
       return (this.$store.state.properties.numProperties
-        && !(this.$store.state.search.searching));
+        && !(this.$store.state.search.searching)) && !(this.$store.state.search.newSearch);
     },
     propertiesList() {
       return (this.$store.state.properties.list);

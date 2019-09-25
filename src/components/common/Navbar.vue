@@ -1,7 +1,9 @@
 <template>
     <div class="navbar">
-        <a href="/"><h1 class="title">house<span class="title-green">hunter</span></h1></a>
-        <span class="title-follower">helping you find rental properties in Amsterdam </span>
+        <div class="title-div" v-on:click="home()">
+            <a href=""><h1 class="title">house<span class="title-green">hunter</span></h1></a>
+            <span class="title-follower">helping you find rental properties in Amsterdam </span>
+        </div>
     </div>
 </template>
 
@@ -11,6 +13,11 @@ export default {
   name: 'Navbar',
   components: {
   },
+  computed: {
+    home() {
+        (this.$store.commit('resetSearch'));
+    },
+  }
 };
 </script>
 
@@ -42,5 +49,9 @@ export default {
     color: #FFFCF9;
     padding-left: 10px;
 
+}
+
+.title-div {
+    display: inline-block;
 }
 </style>

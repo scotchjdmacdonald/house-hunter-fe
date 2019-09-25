@@ -85,6 +85,9 @@ export default new Vuex.Store({
     removeWelcome(state) {
       state.search.newSearch = false;
     },
+    resetSearch(state) {
+      state.search.newSearch = true;
+    }
   },
 
   actions: {

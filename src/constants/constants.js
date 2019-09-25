@@ -32,6 +32,7 @@ export const bedrooms = [
 ];
 
 export const suburbs = [
+  { text: '-- Select --', value: null},
   { text: 'Amstel III/Bullewijk' },
   { text: 'Apollobuurt' },
   { text: 'Banne Buiksloot' },
