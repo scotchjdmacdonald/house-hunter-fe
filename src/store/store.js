@@ -31,18 +31,16 @@ export default new Vuex.Store({
   getters: {
     searchUri: state => constructSearchUri(state.search.searchParams),
 
-    numPages: state => {
-      return (~~(state.properties.totalProperties / state.properties.numProperties));
-    },
+    numPages: state => (~~(state.properties.totalProperties / state.properties.numProperties)),
   },
 
   mutations: {
 
-    //Property
+    // Property
     updateNumProperties(state, numProperties) {
       state.properties.numProperties = numProperties;
     },
-    updateTotalProperties(state, totalProperties){
+    updateTotalProperties(state, totalProperties) {
       state.properties.totalProperties = totalProperties;
     },
     addPropertyResults(state, properties) {
@@ -50,14 +48,14 @@ export default new Vuex.Store({
     },
 
 
-    //Pagination
+    // Pagination
     incrementPage(state, page) {
       state.search.searchParams.page += 1;
     },
     decrementPage(state, page) {
       state.search.searchParams.page -= 1;
     },
-    resetPage(state, page){
+    resetPage(state, page) {
       state.search.searchParams.page = 1;
     },
 
@@ -78,7 +76,7 @@ export default new Vuex.Store({
       state.search.searchParams.minBedrooms = minBedrooms;
     },
 
-    //Conditional Rendering
+    // Conditional Rendering
     toggleLoading(state) {
       state.search.searching = !(state.search.searching);
     },
@@ -91,7 +89,7 @@ export default new Vuex.Store({
 
     newSearch({ commit, dispatch }) {
       commit('resetPage');
-      dispatch('searchForProperties')
+      dispatch('searchForProperties');
     },
 
     searchForProperties({ commit, getters }) {
@@ -103,8 +101,8 @@ export default new Vuex.Store({
         .then((response) => {
           console.log(response);
           if (response.status === 200) {
-            const properties = response.data.properties;
-            const totalResults = response.data.totalResults;
+            const { properties } = response.data;
+            const { totalResults } = response.data;
             commit('updateNumProperties', response.data.properties.length);
             commit('updateTotalProperties', totalResults);
             commit('addPropertyResults', properties);
@@ -118,13 +116,13 @@ export default new Vuex.Store({
         });
     },
 
-    getNextPage({commit, dispatch}) {
+    getNextPage({ commit, dispatch }) {
       commit('incrementPage');
       dispatch('searchForProperties');
     },
-    getPrevPage({commit, dispatch}) {
+    getPrevPage({ commit, dispatch }) {
       commit('decrementPage');
-      dispatch('searchForProperties');      
-    }
+      dispatch('searchForProperties');
+    },
   },
 });

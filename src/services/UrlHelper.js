@@ -7,6 +7,6 @@ export const constructSearchUri = (searchParams) => {
   uri += (searchParams.minBedrooms != null ? `&bedrooms=${searchParams.minBedrooms}` : '');
   uri += (searchParams.suburb != null ? `&suburb=${searchParams.suburb}` : '');
   uri += (searchParams.page != null ? `&page=${searchParams.page}` : '');
-  
+
   return uri;
 };

@@ -1,7 +1,7 @@
 <template>
   <div class="properties-board" v-if="displayProperties">
     <div class="board-details">
-      <span> 
+      <span>
         <span class="emph">{{totalResults}}</span> results
       </span>
     </div>
@@ -35,7 +35,7 @@ export default {
     },
     prevPage() {
       this.$store.dispatch('getPrevPage');
-    }
+    },
   },
   computed: {
     page() {
