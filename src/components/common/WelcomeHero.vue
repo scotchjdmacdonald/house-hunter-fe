@@ -35,7 +35,7 @@ export default {
     flex-direction: column;
     text-align: center;
     color: #F7C100;
-    margin-top: 85px;
+    margin-top: 100px;
 }
 
 .hero-text{

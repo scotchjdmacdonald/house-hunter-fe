@@ -32,7 +32,7 @@ export default {
     align-content: center;
     display: flex;
     flex-direction: column;
-    padding-top: 150px;
+    padding-top: 160px;
     text-align: center;
     color: #F7C100;
     padding-right: 30px;
